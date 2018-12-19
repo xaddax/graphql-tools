@@ -1,0 +1,36 @@
+# Site settings
+title: GraphQLTools.info
+description: Information and tools for GraphQL
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://graphqltools.info"
+
+# User settings
+username: Shank
+user_description: Developer at XADDAX
+email: graphqltools@gmail.com
+twitter_username: graphQltools
+github_username:  xaddax
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:title/
+
+
+# html minify
+compress_html:
+  clippings: all
+  comments: all
+  endings: []
+  profile: false
+
+# Links to include in menu navigation
+# For external links add external: true
+links:
+  - title: Home
+    url: /
+  - title: Tags
+    url: /tags
+
+# exclude my node related stuff
+exclude: ['package.json', 'src', 'node_modules']
