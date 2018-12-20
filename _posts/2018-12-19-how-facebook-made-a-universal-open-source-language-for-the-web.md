@@ -4,7 +4,7 @@ comments: true
 title: "How Facebook Made a Universal Open Source Language for the Web"
 date: 2018-12-19 21:03:06
 image: '/assets/img/'
-description:
+description: 'A general overview of the history and future of GraphQL'
 main-class: 'general'
 color: '#e535ab'
 tags:
