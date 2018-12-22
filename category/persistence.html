@@ -1,0 +1,32 @@
+---
+layout: default
+main-class: 'persistence'
+---
+
+<main class="home" id="scroll" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
+    <h1 class="title-category">persistence</h1>
+    <div id="grid" class="row flex-grid">
+    {% for post in site.posts %}
+        {% if post.main-class == 'persistence' %}
+        <article class="box-item post-{{post.main-class}}" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+            <span class="ribbon"><span>{{post.main-class}}</span></span>
+                <div class="box-body">
+                    <a class="post-link" href="{{ post.link }}">
+                        <h2 class="post-title" itemprop="name">
+                            {{ post.title }}
+                        </h2>
+                    </a>
+                    <a class="post-link" href="{{ post.link }}">
+                        <p class="description">{{ post.description }}</p>
+                    </a>
+                    <div class="tags">
+                        {% for tag in post.tags %}
+                            <a href="/tags/#{{tag | slugify }}">{{ tag }}</a>
+                        {% endfor %}
+                    </div>
+                </div>
+        </article>
+        {% endif %}
+    {% endfor %}
+    </div>
+</main>
